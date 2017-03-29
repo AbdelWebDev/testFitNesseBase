@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="smartrics.restfixture.sample.RunnerTest" time="2.045" tests="1" errors="0" skipped="0" failures="1">
+<testsuite name="smartrics.rest.sample.RunnerTest" time="4.266" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
@@ -62,25 +62,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="restFixtureTests" classname="smartrics.restfixture.sample.RunnerTest" time="2.045">
-    <failure message="at least one test executed in MyTestSamples.MySimple1&#10;0 right, 0 wrong, 0 ignored, 0 exceptions" type="java.lang.AssertionError">java.lang.AssertionError: at least one test executed in MyTestSamples.MySimple1
-0 right, 0 wrong, 0 ignored, 0 exceptions
-	at org.junit.Assert.fail(Assert.java:91)
-	at org.junit.Assert.assertTrue(Assert.java:43)
-	at fitnesse.junit.JUnitHelper.assertPasses(JUnitHelper.java:90)
-	at fitnesse.junit.JUnitHelper.assertPasses(JUnitHelper.java:71)
-	at fitnesse.junit.JUnitHelper.assertSuitePasses(JUnitHelper.java:59)
-	at smartrics.restfixture.sample.RunnerTest.restFixtureTests(RunnerTest.java:21)
-</failure>
-    <system-out><![CDATA[slim:in-process
-
-]]></system-out>
-    <system-err><![CDATA[mars 29, 2017 9:41:44 AM fitnesse.ConfigurationParameter loadProperties
-INFOS: No configuration file found (C:\Users\abamri\Desktop\abdelouhab\scratch\plugins.properties)
-mars 29, 2017 9:41:46 AM fitnesse.junit.PrintTestListener testComplete
-INFOS: MyTestSamples.MySimple1 r 0 w 0 0 0.078 seconds
-mars 29, 2017 9:41:46 AM fitnesse.junit.PrintTestListener close
-INFOS: --complete: 2.022 seconds--
-]]></system-err>
-  </testcase>
+  <testcase name="restFixtureTests" classname="smartrics.rest.sample.RunnerTest" time="4.266"/>
 </testsuite>
