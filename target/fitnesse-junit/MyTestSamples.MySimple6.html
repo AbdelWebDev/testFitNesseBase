@@ -1,0 +1,89 @@
+<html><head><title>MyTestSamples.MySimple6</title><meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/><link rel='stylesheet' type='text/css' href='css/fitnesse.css'/><script src='javascript/jquery-1.11.3.min.js' type='text/javascript'></script><script src='javascript/fitnesse.js' type='text/javascript'></script></head><body><header><h2>MyTestSamples.MySimple6</h2></header><article><br/><span class="meta">variable defined: TEST_SYSTEM=slim</span>
+<br/><table>
+	<tr class="slimRowTitle">
+		<td>Import</td>
+	</tr>
+	<tr class="slimRowColor0">
+		<td><span class="pass">nl.hsac.fitnesse.fixture</span></td>
+	</tr>
+	<tr class="slimRowColor1">
+		<td><span class="pass">nl.hsac.fitnesse.fixture.slim</span></td>
+	</tr>
+</table>
+<br/>Send a HTTP POST supplying the content to post in a variable so the script table does not have newlines in its cells. <br/><br/><span class="meta">variable defined: POST_BODY= {{{
+&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://www.talend.org/service/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;ser:CustomerServiceOperationRequest&gt;
+         &lt;id&gt;4&lt;/id&gt;
+      &lt;/ser:CustomerServiceOperationRequest&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+}}} </span>
+<br/><br/><table>
+	<tr class="slimRowTitle">
+		<td>script</td>
+		<td colspan="4"><span class="pass">xml http test</span></td>
+	</tr>
+	<tr class="slimRowColor4">
+		<td><span class="pass">post</span></td>
+		<td><pre>
+&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://www.talend.org/service/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;ser:CustomerServiceOperationRequest&gt;
+         &lt;id&gt;4&lt;/id&gt;
+      &lt;/ser:CustomerServiceOperationRequest&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</pre></td>
+		<td>to</td>
+		<td><a href="http://localhost:8040/services/CustomerService">http://localhost:8040/services/CustomerService</a></td>
+		<td></td>
+	</tr>
+	<tr class="slimRowColor0">
+		<td>check</td>
+		<td>response status</td>
+		<td colspan="3"><span class="pass">200</span></td>
+	</tr>
+	<tr class="slimRowColor9">
+		<td>show</td>
+		<td colspan="4">response</td>
+	<td><pre>&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
+    &lt;soap:Body&gt;
+        &lt;tns:CustomerServiceOperationResponse xmlns:tns=&quot;http://www.talend.org/service/&quot;&gt;
+            &lt;Phone&gt;907-385-4412&lt;/Phone&gt;
+            &lt;Email&gt;lpaprocki@hotmail.com&lt;/Email&gt;
+        &lt;/tns:CustomerServiceOperationResponse&gt;
+    &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</pre></td></tr>
+	<tr class="slimRowColor9">
+		<td>show</td>
+		<td colspan="4">response headers</td>
+	<td><table class="hash_table">
+	<tr class="hash_row">
+		<td class="hash_key">Date</td>
+		<td class="hash_value">Wed, 29 Mar 2017 14:07:46 GMT</td>
+	</tr>
+	<tr class="hash_row">
+		<td class="hash_key">Content-Type</td>
+		<td class="hash_value">text/xml; charset=UTF-8</td>
+	</tr>
+	<tr class="hash_row">
+		<td class="hash_key">Content-Length</td>
+		<td class="hash_value">292</td>
+	</tr>
+	<tr class="hash_row">
+		<td class="hash_key">Server</td>
+		<td class="hash_value">Jetty(9.2.19.v20160908)</td>
+	</tr>
+</table></td></tr>
+	<tr class="slimRowColor0">
+		<td>check</td>
+		<td>xPath</td>
+		<td>//Phone/text()</td>
+		<td colspan="2"><span class="pass">907-385-4412</span></td>
+	</tr>
+</table>
+</article></body></html>

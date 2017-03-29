@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: smartrics.rest.sample.RunnerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.357 sec - in smartrics.rest.sample.RunnerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.438 sec - in smartrics.rest.sample.RunnerTest
