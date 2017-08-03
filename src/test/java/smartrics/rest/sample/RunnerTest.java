@@ -21,6 +21,6 @@ public class RunnerTest {
         helper.assertSuitePasses("MyTestSamples.MySimple2");
         helper.assertSuitePasses("MyTestSamples.MySimple3");
         helper.assertSuitePasses("MyTestSamples.MySimple4");
-        helper.assertSuitePasses("MyTestSamples.MySimple6");
+        helper.assertSuitePasses("MyTestSamples.MySimple5");
     }
 }
